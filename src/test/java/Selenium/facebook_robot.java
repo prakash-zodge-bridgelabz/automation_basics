@@ -52,11 +52,11 @@ public class facebook_robot {
         Robot robot = new Robot();
         robot.mouseMove(300,300);
         robot.mouseWheel(2);
-        robot.keyPress(KeyEvent.VK_M);
-        robot.keyRelease(KeyEvent.VK_M);
+        robot.keyPress(KeyEvent.VK_P);
+        robot.keyRelease(KeyEvent.VK_P);
         Thread.sleep(200);
-        robot.keyPress(KeyEvent.VK_Y);
-        robot.keyRelease(KeyEvent.VK_Y);
+        robot.keyPress(KeyEvent.VK_I);
+        robot.keyRelease(KeyEvent.VK_I);
         //select
         robot.keyPress(KeyEvent.VK_CONTROL);
         robot.keyPress(KeyEvent.VK_A);
