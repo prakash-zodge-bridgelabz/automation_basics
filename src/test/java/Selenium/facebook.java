@@ -49,7 +49,7 @@ public class facebook {
         FileHandler.copy(SFile,DFile);
         driver.close();
     }
-    // create new accout
+    // create new accout -- xpath and with different locators
     @Test
     public void createNewAccount() throws InterruptedException {
         driver = new ChromeDriver();
