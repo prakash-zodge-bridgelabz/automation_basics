@@ -1,16 +1,19 @@
 package Selenium;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.util.List;
 
 public class facebook_robot {
     WebDriver driver;
     @Test
-    public void login(){
+    public void login() throws InterruptedException {
         driver = new ChromeDriver();
         driver.get("https://www.facebook.com/");
         driver.manage().window().maximize();
@@ -24,10 +27,20 @@ public class facebook_robot {
 
         // Expression using text() function
         driver.findElement(By.xpath("//a[text()='Create new account']")).click();
+        Thread.sleep(2000);
         // Expression using multiple selectors
         driver.findElement(By.xpath("//input[@name='firstname'][@type='text']")).sendKeys("Prakash");
         // contains()
         driver.findElement(By.xpath("//input[contains(@name,'lastname')]")).sendKeys("Zodge");
+
+        // WebElement
+        WebElement closeDiv =driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/img"));
+        // getX and getY
+        int closeDivX = closeDiv.getLocation().getX();
+        int closeDivY = closeDiv.getLocation().getY();
+        System.out.println("X : "+closeDivX+"\nY : "+closeDivY);
+        closeDiv.click();
+        Thread.sleep(2000);
         driver.close();
     }
     // Robot login
