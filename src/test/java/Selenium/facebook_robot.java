@@ -17,8 +17,10 @@ public class facebook_robot {
         driver = new ChromeDriver();
         driver.get("https://www.facebook.com/");
         driver.manage().window().maximize();
+
         // Absolute path - html/body/div/div/div/div/div/div/div[2]/div/div/form/div/div/input
         driver.findElement(By.xpath("html/body/div/div/div/div/div/div/div[2]/div/div/form/div/div/input")).sendKeys("abc.def");
+
         // Relative path - //form/div[1]/div[2]/div/input
         driver.findElement(By.xpath("//form/div[1]/div[2]/div/input")).sendKeys("abc");
         // Expression with relative path

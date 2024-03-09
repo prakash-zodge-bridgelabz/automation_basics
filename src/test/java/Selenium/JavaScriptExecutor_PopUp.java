@@ -57,4 +57,12 @@ public class JavaScriptExecutor_PopUp {
         Thread.sleep(2000);
         alert.accept();
     }
+    @Test
+    public void hiddenPopUp() throws InterruptedException {
+        driver.get("https://www.irctc.co.in/nget/train-search");
+        driver.manage().window().maximize();
+        driver.findElement(By.xpath("//p-calendar[@id='jDate']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//a[contains(text(),'21')]")).click();
+    }
 }
