@@ -61,7 +61,7 @@ public class facebook {
         driver.findElement(By.name("lastname")).sendKeys("Zodge");
         driver.findElement(By.name("reg_email__")).sendKeys("abc.def@gmail.com");
         driver.findElement(By.name("reg_passwd__")).sendKeys("Pass@123");
-        Select day = new Select(driver.findElement(By.id("day")));                              
+        Select day = new Select(driver.findElement(By.id("day")));
         day.selectByValue("11");
         driver.findElement(By.id("day")).click();
         Select month = new Select(driver.findElement(By.id("month")));
